@@ -1,0 +1,21 @@
+{
+	"variable": [
+		"Arial",
+		"Calibri",
+		"Cambria",
+		"Times New Roman"
+	],
+	"fixed": [
+		"Consolas",
+		"Courier New",
+		"Fira Code",
+		"Fira Mono",
+		"Inconsolata",
+		"Menlo",
+		"Monaco",
+		"PragmataPro",
+		"ProggySmall",
+		"ProggyTiny",
+		"Source Code Pro"
+	]
+}

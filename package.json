@@ -1,0 +1,35 @@
+{
+  "name": "util.fontlist",
+  "version": "0.0.0",
+  "author": "jmquigley <jmquigley@outlook.com>",
+  "description": "Detects the fonts that are available to the browser on the current system",
+  "private": false,
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jmquigley/util.fontlist"
+  },
+  "bugs": {
+    "url": "https://github.com/jmquigley/util.fontlist/issues"
+  },
+  "engines": {
+    "node": ">=7.5"
+  },
+  "dependencies": {
+    "util.pkgwrap": "0.0.68"
+  },
+  "devDependencies": {
+    "@types/node": "^8.0.28",
+    "debug": "^3.1.0",
+    "tslint": "^5.7.0",
+    "typescript": "^2.5.2"
+  },
+  "main": "./index.js",
+  "types": "./index.d.ts",
+  "scripts": {
+    "all": "yarn install && yarn run clean && yarn run lint && yarn run build",
+    "build": "pkgwrap --build",
+    "clean": "pkgwrap --clean",
+    "lint": "pkgwrap --lint"
+  }
+}
