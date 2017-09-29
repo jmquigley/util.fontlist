@@ -56,7 +56,7 @@ export class Detector {
 		for (const key of Object.keys(this.baseFonts)) {
 			this.span.style.fontFamily = key;
 
-			this.body.insertAdjacentElement('afterbegin', this.span);
+			this.body.appendChild(this.span);
 			this.baseFonts[key].width = this.span.offsetWidth;
 			this.baseFonts[key].height = this.span.offsetHeight;
 			this.body.removeChild(this.span);
@@ -75,7 +75,7 @@ export class Detector {
 	public detect(fontName: string) {
 		for (const key of Object.keys(this.baseFonts)) {
 			this.span.style.fontFamily = `${fontName},${key}`;
-			this.body.insertAdjacentElement('afterbegin', this.span);
+			this.body.appendChild(this.span);
 
 			const matched: boolean = (this.span.offsetWidth !== this.baseFonts[key].width
 				|| this.span.offsetHeight !== this.baseFonts[key].height);
