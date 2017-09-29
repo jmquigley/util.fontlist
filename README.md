@@ -43,7 +43,7 @@ if (detector.detect('Consolas')) {
 }
 ```
 
-#### Conveniece Retrieval
+#### Convenience Retrieval
 A method is provided with the module named `getFontList` that will take a list of font names, internally create the detector, check if each given font exists, and return the list of available fonts.
 
 ```javascript
