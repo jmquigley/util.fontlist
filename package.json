@@ -1,6 +1,6 @@
 {
   "name": "util.fontlist",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": "jmquigley <jmquigley@outlook.com>",
   "description": "Detects the fonts that are available to the browser on the current system",
   "private": false,
