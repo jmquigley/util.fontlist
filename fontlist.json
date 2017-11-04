@@ -3,19 +3,30 @@
 		"Arial",
 		"Calibri",
 		"Cambria",
-		"Times New Roman"
+		"Georgia",
+		"Helvetica",
+		"Lucida Sans",
+		"Segoe UI",
+		"Tahoma",
+		"Times New Roman",
+		"Verdana"
 	],
 	"fixed": [
 		"Consolas",
 		"Courier New",
+		"DejaVu Sans Mono",
 		"Fira Code",
 		"Fira Mono",
+		"Hasklig",
 		"Inconsolata",
+		"Lucida Console",
+		"Lucida Console Regular",
 		"Menlo",
 		"Monaco",
 		"PragmataPro",
 		"ProggySmall",
 		"ProggyTiny",
-		"Source Code Pro"
+		"Source Code Pro",
+		"Terminal"
 	]
 }
