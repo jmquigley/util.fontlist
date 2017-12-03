@@ -21,7 +21,8 @@
     "@types/node": "^8.0.54",
     "debug": "^3.1.0",
     "tslint": "^5.8.0",
-    "typescript": "^2.6.2"
+    "typescript": "^2.6.2",
+    "util.pkgwrap": "^0.0.88"
   },
   "pkgwrap": {
     "cleanup": [
@@ -34,7 +35,6 @@
     "build": "yarn clean && yarn run lint && pkgwrap --build",
     "clean": "pkgwrap --clean",
     "lint": "pkgwrap --lint",
-    "preinstall": "yarn global add util.pkgwrap",
     "prepublishOnly": "yarn run all"
   }
 }
