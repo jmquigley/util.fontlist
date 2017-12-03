@@ -34,6 +34,7 @@
     "build": "yarn clean && yarn run lint && pkgwrap --build",
     "clean": "pkgwrap --clean",
     "lint": "pkgwrap --lint",
-    "preinstall": "yarn global add util.pkgwrap"
+    "preinstall": "yarn global add util.pkgwrap",
+    "prepublishOnly": "yarn run all"
   }
 }
