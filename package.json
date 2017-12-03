@@ -1,6 +1,6 @@
 {
   "name": "util.fontlist",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "author": "jmquigley <jmquigley@outlook.com>",
   "description": "Detects the fonts that are available to the browser on the current system",
   "main": "./index.js",
@@ -23,12 +23,12 @@
     "tslint": "^5.8.0",
     "typescript": "^2.6.2"
   },
-	"pkgwrap": {
+  "pkgwrap": {
     "cleanup": [
       "index.d.ts",
       "index.js"
     ]
-	},
+  },
   "scripts": {
     "all": "yarn install && yarn run build",
     "build": "yarn clean && yarn run lint && pkgwrap --build",
