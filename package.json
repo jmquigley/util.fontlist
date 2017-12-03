@@ -3,6 +3,8 @@
   "version": "0.0.5",
   "author": "jmquigley <jmquigley@outlook.com>",
   "description": "Detects the fonts that are available to the browser on the current system",
+  "main": "./index.js",
+  "types": "./index.d.ts",
   "private": false,
   "license": "MIT",
   "repository": {
@@ -13,23 +15,25 @@
     "url": "https://github.com/jmquigley/util.fontlist/issues"
   },
   "engines": {
-    "node": ">=7.5"
-  },
-  "dependencies": {
-    "util.pkgwrap": "0.0.73"
+    "node": ">=7.x"
   },
   "devDependencies": {
-    "@types/node": "^8.0.53",
+    "@types/node": "^8.0.54",
     "debug": "^3.1.0",
     "tslint": "^5.8.0",
-    "typescript": "^2.6.1"
+    "typescript": "^2.6.2"
   },
-  "main": "./index.js",
-  "types": "./index.d.ts",
+	"pkgwrap": {
+    "cleanup": [
+      "index.d.ts",
+      "index.js"
+    ]
+	},
   "scripts": {
-    "all": "yarn install && yarn run clean && yarn run lint && yarn run build",
-    "build": "pkgwrap --build",
+    "all": "yarn install && yarn run build",
+    "build": "yarn clean && yarn run lint && pkgwrap --build",
     "clean": "pkgwrap --clean",
-    "lint": "pkgwrap --lint"
+    "lint": "pkgwrap --lint",
+    "preinstall": "yarn global add util.pkgwrap"
   }
 }
