@@ -6,7 +6,6 @@
 [![tslint code style](https://img.shields.io/badge/code_style-TSlint-5ed9c7.svg)](https://palantir.github.io/tslint/)
 [![NPM](https://img.shields.io/npm/v/util.fontlist.svg)](https://www.npmjs.com/package/util.fontlist)
 
-
 ## Installation
 
 This module uses [yarn](https://yarnpkg.com/en/) to manage dependencies and run scripts for development.
