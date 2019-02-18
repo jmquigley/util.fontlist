@@ -1,6 +1,6 @@
-'use strict';
+"use strict";
 
-const debug = require('debug')('fontlist');
+const debug = require("debug")("fontlist");
 
 interface FontSize {
 	width: number;
@@ -17,22 +17,21 @@ export enum FontType {
 	variable
 }
 
-export const fonts: any = require('./fontlist.json');
-export const fontVariable: string[] = fonts['variable'];
-export const fontFixed: string[] = fonts['fixed'];
+export const fonts: any = require("./fontlist.json");
+export const fontVariable: string[] = fonts["variable"];
+export const fontFixed: string[] = fonts["fixed"];
 
 export class Detector {
-
 	private baseFonts: Fonts = {
-		'monospace': {
+		monospace: {
 			width: 0,
 			height: 0
 		},
-		'sans-serif': {
+		"sans-serif": {
 			width: 0,
 			height: 0
 		},
-		'serif': {
+		serif: {
 			width: 0,
 			height: 0
 		}
@@ -43,12 +42,12 @@ export class Detector {
 
 	// Use m or w because these two characters take up the maximum width.
 	// And use LLi so that the same matching fonts can get separated
-	private readonly testString: string = 'mmmmmmmmmmlli';
-	private readonly testSize: string = '72px';
+	private readonly testString: string = "mmmmmmmmmmlli";
+	private readonly testSize: string = "72px";
 
 	constructor() {
-		this.body = document.getElementsByTagName('body')[0];
-		this.span = document.createElement('span');
+		this.body = document.getElementsByTagName("body")[0];
+		this.span = document.createElement("span");
 
 		this.span.style.fontSize = this.testSize;
 		this.span.innerHTML = this.testString;
@@ -77,16 +76,17 @@ export class Detector {
 			this.span.style.fontFamily = `${fontName},${key}`;
 			this.body.appendChild(this.span);
 
-			const matched: boolean = (this.span.offsetWidth !== this.baseFonts[key].width
-				|| this.span.offsetHeight !== this.baseFonts[key].height);
+			const matched: boolean =
+				this.span.offsetWidth !== this.baseFonts[key].width ||
+				this.span.offsetHeight !== this.baseFonts[key].height;
 			this.body.removeChild(this.span);
 			if (matched) {
-				debug('%s is available', fontName);
+				debug("%s is available", fontName);
 				return true;
 			}
 		}
 
-		debug('%s is NOT available', fontName);
+		debug("%s is NOT available", fontName);
 		return false;
 	}
 }
@@ -103,7 +103,10 @@ export class Detector {
  * desired.
  * @return {string[]} an array of strings containing valid fonts.
  */
-export function getFontList(fontList: string[] = [], fontType: FontType = FontType.all): string[] {
+export function getFontList(
+	fontList: string[] = [],
+	fontType: FontType = FontType.all
+): string[] {
 	const l: string[] = [];
 	const detector = new Detector();
 
@@ -124,7 +127,7 @@ export function getFontList(fontList: string[] = [], fontType: FontType = FontTy
 		}
 	}
 
-	debug('list of possible fonts: %O', fontList);
+	debug("list of possible fonts: %O", fontList);
 	for (const fontName of fontList) {
 		if (detector.detect(fontName)) {
 			l.push(fontName);
