@@ -19,6 +19,7 @@
 	"module": "./index.es.min.js",
 	"types": "./index.d.ts",
 	"files": [
+		"fontlist.json",
 		"index.*.min.js",
 		"index.d.ts"
 	],
