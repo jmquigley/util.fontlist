@@ -48,7 +48,6 @@
 		"clean": "pkgwrap --clean",
 		"clean:dist": "yarn clean && rimraf node_modules/ yarn.lock",
 		"lint": "pkgwrap --lint",
-		"minify": "minify ./index.js --out-file ./index.min.js",
 		"prepublishOnly": "yarn run all",
 		"prettier": "prettier --write \"**/*.{ts,tsx,js,json,yaml,yml,css}\""
 	}
