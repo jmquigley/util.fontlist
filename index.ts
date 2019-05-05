@@ -1,6 +1,4 @@
-"use strict";
-
-const debug = require("debug")("fontlist");
+const debug = require("debug")("util.fontlist");
 
 interface FontSize {
 	width: number;
