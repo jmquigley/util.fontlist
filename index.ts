@@ -21,7 +21,7 @@ export const fontFixed: string[] = fonts["fixed"];
 
 export class Detector {
 	private baseFonts: Fonts = {
-		monospace: {
+		"monospace": {
 			width: 0,
 			height: 0
 		},
@@ -29,7 +29,7 @@ export class Detector {
 			width: 0,
 			height: 0
 		},
-		serif: {
+		"serif": {
 			width: 0,
 			height: 0
 		}
